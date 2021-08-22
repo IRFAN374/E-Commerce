@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // Routing
@@ -10,6 +10,7 @@ import LoginPage from "./components/screen/LoginPage";
 import RegisterPage from "./components/screen/RegisterPage";
 import ForgotPasswordPage from "./components/screen/ForgotPasswordPage";
 import ResetPasswordPage from "./components/screen/ResetPasswordPage";
+import Navbar from './components/screen/Navbar'
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
           <Route exact path="/forgotpassword" component={ForgotPasswordPage} />
           <Route exact path="/passwordreset/:resetToken" component={ResetPasswordPage} />
         </Switch>
+        <Navbar />
       </div>
     </Router>
   );
