@@ -16,6 +16,7 @@ const App = () => {
   return (
     <Router>
       <div className="app">
+        <Navbar />  // navabr is should be here
         <Switch>
           <PrivateRoute exact path="/" component={PrivatePage} />
           <Route exact path="/login" component={LoginPage} />
@@ -23,7 +24,7 @@ const App = () => {
           <Route exact path="/forgotpassword" component={ForgotPasswordPage} />
           <Route exact path="/passwordreset/:resetToken" component={ResetPasswordPage} />
         </Switch>
-        <Navbar />
+        
       </div>
     </Router>
   );
